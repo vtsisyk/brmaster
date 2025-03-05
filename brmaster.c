@@ -202,6 +202,13 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
+	if (!lst)
+	{
+		printf("no bridges!\n");
+		print_usage(argv[0]);
+		return EXIT_SUCCESS;
+	}
+
 	print_data(lst);
 	release_data(&lst);
 
